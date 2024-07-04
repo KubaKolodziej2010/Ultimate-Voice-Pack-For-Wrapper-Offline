@@ -5438,17 +5438,17 @@
 			"desc": "Zeynep (Acapela)"
 		},
 		"rod22k2": {
-			"country": "TR",
-			"language": "tr",
-			"gender": "F",
+			"country": "US",
+			"language": "es",
+			"gender": "M",
 			"source": "acapela",
 			"arg": "rod22k",
 			"desc": "Rod (Acapela/Lazypy.ro)"
 		},
 		"ryan22k2": {
-			"country": "TR",
-			"language": "tr",
-			"gender": "F",
+			"country": "US",
+			"language": "es",
+			"gender": "M",
 			"source": "acapela",
 			"arg": "ryan22k",
 			"desc": "Ryan (Acapela/Lazypy.ro)"
