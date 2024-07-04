@@ -5437,21 +5437,21 @@
 			"arg": "zeynep22k",
 			"desc": "Zeynep (Acapela)"
 		},
-		"rod22k2": {
-			"country": "US",
-			"language": "es",
-			"gender": "M",
-			"source": "acapela",
-			"arg": "rod22k",
-			"desc": "Rod (Acapela/Lazypy.ro)"
-		},
 		"ryan22k2": {
 			"country": "US",
-			"language": "es",
+			"language": "en",
 			"gender": "M",
 			"source": "acapela",
 			"arg": "ryan22k",
-			"desc": "Ryan (Acapela/Lazypy.ro)"
+			"desc": "Ryan (Lazypy.ro)"
+		},
+                "rod22k2": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "acapela",
+			"arg": "rod22k",
+			"desc": "Rod (Lazypy.ro)"
 		},
 		"lulu": {
 			"country": "CN",
