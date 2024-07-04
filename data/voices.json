@@ -38,7 +38,7 @@
 			"gender": "M",
 			"source": "voiceforge",
 			"arg": "Charlie",
-			"desc": "Charlie"
+			"desc": "Young Guy"
 		},
 		"Dallas": {
 			"country": "US",
@@ -54,7 +54,7 @@
 			"gender": "M",
 			"source": "voiceforge",
 			"arg": "Damien",
-			"desc": "Damien"
+			"desc": "Scary Voice"
 		},
 		"David": {
 			"country": "US",
@@ -5420,6 +5420,22 @@
 			"source": "acapela",
 			"arg": "zeynep22k",
 			"desc": "Zeynep (Acapela)"
+		},
+		"rod22k2": {
+			"country": "TR",
+			"language": "tr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "rod22k",
+			"desc": "Rod (Acapela/Lazypy.ro)"
+		},
+		"ryan22k2": {
+			"country": "TR",
+			"language": "tr",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "ryan22k",
+			"desc": "Ryan (Acapela/Lazypy.ro)"
 		},
 		"lulu": {
 			"country": "CN",
