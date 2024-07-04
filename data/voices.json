@@ -56,6 +56,14 @@
 			"arg": "Damien",
 			"desc": "Scary Voice"
 		},
+		"Damien2": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "cepstral",
+			"arg": "Damien",
+			"desc": "Scary Voice (Cepstral)"
+		},
 		"David": {
 			"country": "US",
 			"language": "en",
@@ -63,6 +71,14 @@
 			"source": "voiceforge",
 			"arg": "David",
 			"desc": "David"
+		},
+		"David2": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "cepstral",
+			"arg": "David",
+			"desc": "David (Cepstral)"
 		},
 		"Diane": {
 			"country": "US",
