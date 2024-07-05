@@ -1,6 +1,6 @@
 # NOTE: This works for 2.0.0 Onwards! make sure to use that version if you want to use this pack!
 
-WHAT IS THIS?
+This is the VoicePack Fix For Wrapper Offline,
 
 This is the Ultimate VoicePack For Wrapper Offline, it has over 1000+ voices from different TTS providers, those being.
 
