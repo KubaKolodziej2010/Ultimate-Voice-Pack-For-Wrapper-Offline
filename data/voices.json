@@ -136,6 +136,14 @@
 			"arg": "Shouty",
 			"desc": "Shouty"
 		},
+		 "Shouty2": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "cepstral",
+			"arg": "Shouty",
+			"desc": "Shouty (Cepstral)"
+		},
 		"Walter": {
 			"country": "US",
 			"language": "en",
@@ -4324,6 +4332,14 @@
 			"source": "acapela2",
 			"arg": "eng_rosie_22k_ns.bvcu",
 			"desc": "Rosie"
+		},
+		"rosie22k2": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "acapela",
+			"arg": "rosie22k",
+			"desc": "Rosie (Lazypy.ro)"
 		},
 		"sophiabtob22k": {
 			"country": "GB",
