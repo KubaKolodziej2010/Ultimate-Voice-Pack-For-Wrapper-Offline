@@ -141,10 +141,11 @@ module.exports = function processVoice(voiceName, rawText) {
 				case "pollyold": {
 					const req = https.request(
 						{
-							hostname: "gonutts.net",
+							hostname: "101.99.94.14",														
 							path: voice.arg,
 							method: "POST",
-							headers: { 
+							headers: { 			
+								Host: "tts.town",					
 								"Content-Type": "application/x-www-form-urlencoded"
 							}
 						},
@@ -156,9 +157,16 @@ module.exports = function processVoice(voiceName, rawText) {
 								const beg = html.indexOf("/tmp/");
 								const end = html.indexOf("mp3", beg) + 3;
 								const sub = html.subarray(beg, end).toString();
+								//console.log(html.toString());
 
 								https
-									.get(`https://gonutts.net${sub}`, res)
+									.get({
+										hostname: "101.99.94.14",	
+										path: `/${sub}`,
+										headers: {
+											Host: "tts.town"
+										}
+									}, res)
 									.on("error", rej);
 							});
 						}
@@ -275,43 +283,6 @@ module.exports = function processVoice(voiceName, rawText) {
 					break;
 				}
 				case "acapela": {
-					const req = https.request(
-						{
-							hostname: "lazypy.ro",
-							path: "/tts/request_tts.php",
-							method: "POST",
-							headers: {
-								"Content-type": "application/x-www-form-urlencoded"
-							}
-						},
-						(r) => {
-							let body = "";
-							r.on("data", (b) => body += b);
-							r.on("end", () => {
-								const json = JSON.parse(body);
-								console.log(JSON.stringify(json, undefined, 2))
-								if (json.success !== true) {
-									return rej(json.error_msg);
-								}
-
-								https.get(json.audio_url, (r) => {
-								res(r);
-								});							
-							});
-							r.on("error", rej);
-						}
-						
-					).on("error", rej);
-					req.end(
-						new URLSearchParams({
-							text: text,
-							voice: voice.arg,
-							service: "Acapela",
-						}).toString()
-					);
-					break;
-				}
-				case "acapela2": {
 					let acapelaArray = [];
 					for (let c = 0; c < 15; c++) acapelaArray.push(~~(65 + Math.random() * 26));
 					const email = `${String.fromCharCode.apply(null, acapelaArray)}@gmail.com`;
@@ -332,8 +303,7 @@ module.exports = function processVoice(voiceName, rawText) {
 								const nonce = JSON.parse(Buffer.concat(buffers)).nonce;
 								let req = https.request(
 									{
-										hostname: "acapela-group.com",
-										port: "8443",
+										hostname: "h-ir-ssd-1.acapela-group.com",
 										path: "/Services/Synthesizer",
 										method: "POST",
 										headers: {
@@ -380,7 +350,7 @@ module.exports = function processVoice(voiceName, rawText) {
 					);
 					break;
 				}
-				case "acapela3": {
+				case "acapela2": {
 					var q = new URLSearchParams({
 						voiceSpeed: 100,
 						inputText: Buffer.from(text,'utf8').toString('base64'),
@@ -439,7 +409,7 @@ module.exports = function processVoice(voiceName, rawText) {
 
 					https.get({
 						hostname: "demo.cobaltspeech.com",
-						path: `/voicegen/api/v1/synthesize?${q}`,
+						path: `/voicegen/api/voicegen/v1/streaming-synthesize?${q}`,
 					}, (r) => fileUtil.convertToMp3(r, "wav").then(res).catch(rej)).on("error", rej);
 					break;
 				}
